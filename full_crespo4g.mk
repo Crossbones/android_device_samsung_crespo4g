@@ -21,7 +21,8 @@
 
 # Camera
 PRODUCT_PACKAGES := \
-    Camera
+    Camera \
+    Torch
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
