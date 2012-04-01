@@ -34,7 +34,7 @@ on boot
     chown gps system /data/gps
 
 # cpufreq, set ondemand governor
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
+#    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
 
 on fs
     mkdir /efs 0775 radio radio
