@@ -89,9 +89,10 @@
     <integer-array translatable="false" name="config_tether_upstream_types">
         <item>0</item>
         <item>1</item>
+        <item>4</item>
+        <item>5</item>
         <item>6</item>
         <item>7</item>
-        <item>4</item>
     </integer-array>
 
     <!-- If the DUN connection for this CDMA device supports more than just DUN -->
@@ -103,7 +104,7 @@
         <item>"default"</item>
         <item>"dun"</item>
         <item>"mms"</item>
-        <item>"supl</item>
+        <item>"supl"</item>
     </string-array>
 
     <!-- If this value is true, The mms content-disposition field is supported correctly.
