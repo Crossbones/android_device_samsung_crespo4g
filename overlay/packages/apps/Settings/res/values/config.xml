@@ -21,4 +21,7 @@
     <!-- If false, MIN is displayed. If true, MSID is displayed. -->
     <bool name="config_msid_enable">true</bool>
 
+    <!-- True if device has BLN (Back Light Notification) support -->
+    <bool name="device_enable_bln">true</bool>
+
 </resources>
