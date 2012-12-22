@@ -31,32 +31,6 @@ on boot
     mkdir /data/gps 770 gps system
     chown gps system /data/gps
 
-# Permissions for CPU
-    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-    chown system system /sys/block/mmcblk0/queue/scheduler
-
-# Memory management.  Basic kernel parameters, and allow the high
-# level system server to be able to adjust the kernel OOM driver
-# parameters to match how it is managing things.
-    write /proc/sys/vm/overcommit_memory 1
-    write /proc/sys/vm/overcommit_ratio 50
-    write /proc/sys/vm/min_free_order_shift 4
-    chown root system /sys/module/lowmemorykiller/parameters/adj
-    chmod 0664 /sys/module/lowmemorykiller/parameters/adj
-    chown root system /sys/module/lowmemorykiller/parameters/minfree
-    chmod 0664 /sys/module/lowmemorykiller/parameters/minfree
-
-    write /proc/sys/vm/dirty_writeback_centisecs 500
-    write /proc/sys/vm/dirty_expire_centisecs 200
-    write /proc/sys/vm/dirty_background_ratio  60
-    write /proc/sys/vm/min_free_kbytes 4096
-    write /proc/sys/vm/swappiness 0
-    write /proc/sys/vm/dirty_ratio 90
-    write /proc/sys/vm/panic_on_oom 0
-    write /proc/sys/vm/vfs_cache_pressure 50
-
 on fs
     mkdir /efs 0775 radio radio
     mount yaffs2 mtd@efs /efs nosuid nodev
